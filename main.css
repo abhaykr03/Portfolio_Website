@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #000000;
   font-family: "Noto Sans", sans-serif;
@@ -139,7 +142,6 @@ header {
 #row-work > .col-3 {
   padding-left: 20px;
 }
-
 #row-work > .work-card {
   display: flex;
   flex-direction: column;
@@ -148,7 +150,6 @@ header {
 #row-work > .work-card > img {
   height: 400px;
 }
-
 .work-card h4 {
   margin-top: 30px;
 }
@@ -288,8 +289,16 @@ progress[value]::-webkit-progress-value {
   grid-template-columns: 50% 50%;
   padding-top: 70px;
 }
+.footer_heading {
+  margin-top: 0.5em;
+}
 .left_column {
   position: relative;
+  text-align: center;
+}
+.left_column > img {
+  width: auto;
+  height: 404px;
 }
 .vertical_copyright {
   position: absolute;
@@ -311,7 +320,7 @@ progress[value]::-webkit-progress-value {
   border: none;
   border-radius: 10px;
   padding: 10px 30px;
-  margin-top: 20px;
+  margin-top: 1.8em;
 }
 .footer_cta:hover {
   background-color: #2cb67d;
@@ -326,6 +335,9 @@ progress[value]::-webkit-progress-value {
 .fab {
   padding: 20px 0;
 }
+.fab:hover {
+  color: #fe4900;
+}
 .tri_bot_right {
   height: 91px;
   width: 91px;
@@ -336,28 +348,367 @@ progress[value]::-webkit-progress-value {
 
 /* //=====================Media Query============================// */
 
-@media screen and (min-width: 1400px) {
+@media (min-width: 1400px) {
   /* General Setting */
   .container {
-    margin: 5% 10% 0% 10%;
-    padding: 2% 2%;
+    margin: 2% 10% 0% 10%;
+  }
+  .menu-toggle {
+    display: none;
   }
   p {
     font-size: 25px;
     font-weight: normal;
     line-height: 35px;
   }
-  /* Banner */
   #row-work > .work-card {
     width: 33.33%;
   }
   #row-work > .work-card > img {
+    height: auto;
+    width: auto;
+  }
+  /* Banner */
+  .left_column > img {
     height: 500px;
   }
-  #About > .xyz {
-    padding: 0px 0px;
+  .vertical_copyright {
+    position: absolute;
+    top: 68%;
+    left: -22%;
+    transform: rotate(90deg);
+  }
+  .tri_bot_right {
+    height: 91px;
+    width: 91px;
+    position: absolute;
+    top: 80%;
+    left: 85%;
+  }
+  .social_media {
+    display: none;
+  }
+  .copyright {
+    display: none;
   }
 }
 /* //===================For Mobile Devices ==================// */
-@media screen and (max-width: 450px) {
+@media (min-width: 360px) and (max-width: 650px) {
+  /* Toggled Navbar */
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  header > nav {
+    position: absolute;
+    width: 100%;
+    height: calc(auto - 50px);
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  header nav.active {
+    left: 0;
+  }
+  .menu-toggle {
+    position: absolute;
+    top: 8%;
+    right: 0%;
+  }
+  .nav_links li {
+    display: block;
+    margin: 5% 0%;
+    padding: 0px;
+  }
+  .cta {
+    display: none;
+  }
+  .container {
+    margin: 0 16px 0 16px;
+    padding: 0;
+    position: relative;
+  }
+  h1 {
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 53px;
+  }
+  h2 {
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 53px;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 33px;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 33px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+  }
+  #header_banner {
+    height: auto;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    height: auto;
+    width: auto;
+    grid-gap: 0px;
+    border-width: 1px;
+  }
+  .row > .contents > h1 {
+    margin-top: 50px;
+  }
+  .row > .contents > h5 {
+    margin-top: 9px;
+  }
+  .cta-secondary {
+    background-color: #000000;
+    border: 2px solid #fe4900;
+    border-radius: 10px;
+    padding: 9px 15px;
+    margin-top: 43px;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .cta-secondary:hover {
+    color: #2cb67d;
+    border: 2px solid #2cb67d;
+  }
+  .row > .bnr-img {
+    margin: 40px 21px 23px 21px;
+  }
+  .row > .bnr-img > img {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+  }
+  /* Work Section */
+  #work {
+    background-color: #111111;
+    padding: 0px;
+    height: auto;
+  }
+  #work > .container > h1 {
+    padding: 24px 0 24px 0;
+  }
+  #row-work {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+  }
+  #row-work > .work-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #row-work > .work-card > img {
+    height: auto;
+    width: 100%;
+  }
+  #row-work > .col-1 {
+    padding-right: 0px;
+  }
+  #row-work > .col-2 {
+    margin-top: 56px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  #row-work > .col-3 {
+    margin-top: 56px;
+    padding-left: 0px;
+  }
+  .work-card h4 {
+    margin-top: 28px;
+  }
+  .work-card p {
+    margin-top: 8px;
+  }
+  .tech-tags {
+    display: inline-block;
+    border: 2px solid #fe4900;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 8px 24px;
+    margin: 20px 16px 0 0;
+  }
+  #skill > .container > h1 {
+    margin: 24px 0 40px 0;
+  }
+  .skill__container {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .skill__info {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .skill__gravatar {
+    display: block;
+    height: auto;
+    width: 27px;
+  }
+  .skill__name {
+    margin-left: 16px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+  }
+  .skill__progress {
+    flex-grow: 1;
+  }
+  .skill__progress {
+    flex-grow: 0.8;
+  }
+  .skill__experties {
+    display: none;
+  }
+  /* Education */
+  .Edu-Exp {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .Edu_heading {
+    max-width: 100%;
+    margin-top: 80px;
+  }
+  .College_Duration {
+    list-style: none;
+    width: 80px;
+    position: relative;
+    top: 65px;
+    left: -65px;
+    transform: rotate(90deg);
+  }
+  .Edu_details {
+    margin-top: 24px;
+    margin-left: 0px;
+    padding-left: 33px;
+    max-width: 100%;
+  }
+  .School_year {
+    list-style: none;
+    width: 50px;
+    position: relative;
+    top: 93px;
+    left: -50px;
+    transform: rotate(90deg);
+  }
+  .School_heading {
+    margin-top: 56px;
+    margin-left: 0px;
+    padding-left: 33px;
+    max-width: 100%;
+  }
+  .Exp_heading {
+    max-width: 100%;
+    padding-left: 0px;
+    margin-top: 80px;
+  }
+  .Intern_period {
+    list-style: none;
+    width: 150px;
+    position: relative;
+    top: 140px;
+    left: -100px;
+    transform: rotate(90deg);
+  }
+  .Exp_details {
+    margin-top: 24px;
+    margin-left: 0px;
+    padding-left: 33px;
+    max-width: 100%;
+  }
+  /* About */
+  #About {
+    background-color: #16161a;
+    margin-top: 0px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    height: auto;
+    width: auto;
+    grid-gap: 0px;
+    padding: 30px 0 0 0;
+  }
+  .left_column > img {
+    width: 100%;
+    height: auto;
+  }
+  .About_contents {
+    padding-right: 0px;
+    position: relative;
+  }
+  .About_contents > p {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+  .footer_heading {
+    margin-top: 32px;
+    text-align: center;
+  }
+  .About_contents > h5 {
+    text-align: center;
+    margin-top: 24px;
+  }
+  .footer_cta {
+    background-color: #fe4900;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 24px 0px;
+    width: 100%;
+  }
+  .vertical_copyright,
+  .tri_bot_right,
+  .social {
+    display: none;
+  }
+  .social_media {
+    display: flex;
+    margin-top: 40px;
+  }
+  .Socials {
+    font-style: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+  .media_links {
+    margin-left: 33px;
+  }
+  .fab {
+    padding: 0 12px;
+  }
+  .copyright {
+    margin-top: 40px;
+    margin-bottom: 34px;
+  }
+  .orange_bar {
+    background-color: #fe4900;
+  }
+  .copyright_name {
+    margin-left: 23px;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
