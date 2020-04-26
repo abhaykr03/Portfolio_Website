@@ -32,9 +32,9 @@
           </nav>
           <a href=""><button class="cta">Resume</button></a>
         </header>
-        <div class="menu-toggle"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></div>
+        <div class="menu-toggle"><i class="fas fa-bars fa-2x menu-active" id="menu-open" aria-hidden="true"></i><i id="menu-close" class="fas fa-times fa-2x"></i></div>
       </div>
-      <div class="container">
+      <div class="container" id="header-aside">
         <div class="row">
           <div class="col contents">
             <h1>
@@ -59,7 +59,7 @@
         <div class="row" id="row-work">
           <div class="work-card col-1">
             <img src="./imgs/website_small.png" alt="covid-19 webpage" />
-            <h4>Coronavirus Landing Page</h4>
+            <a href="https://bit.ly/fight_corona"><h4>Coronavirus Landing Page</h4></a>
             <p>
               Page developed to spread awareness and motivate people to donate
               more into PM CARE funds.
@@ -72,7 +72,7 @@
           </div>
           <div class="work-card col-2">
             <img src="./imgs/ronaldo_webpage.png" alt="ronaldo webpage" />
-            <h4>Cristiano Ronaldo Webpage</h4>  
+            <a href="https://bit.ly/ronaldo_webpage"><h4>Cristiano Ronaldo Webpage</h4></a> 
             <p>
               Responsive Landing Page Design from scratch. This landing page
               reveals info about the player.
@@ -224,6 +224,9 @@
       $(document).ready(function(){
         $('.menu-toggle').click(function(){
           $('nav').toggleClass('active')
+          $('#header-aside').toggleClass('header-aside--active')
+          $('#menu-close').toggleClass('menu-active')
+          $('#menu-open').toggleClass('menu-active')
         })
       })
     </script>

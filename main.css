@@ -395,6 +395,26 @@ progress[value]::-webkit-progress-value {
 /* //===================For Mobile Devices ==================// */
 @media (min-width: 360px) and (max-width: 650px) {
   /* Toggled Navbar */
+
+  #header-aside {
+    /* margin-top: 0px; */
+    transition: all 0.5s ease-in-out;
+  }
+
+  .header-aside--active {
+    margin-top: 170px !important;
+  }
+
+  #menu-open,
+  #menu-close {
+    display: none;
+  }
+
+  .menu-active {
+    display: block !important;
+    transition: all 0.5s ease-in-out;
+  }
+
   header {
     margin-top: 24px;
     display: flex;
@@ -405,7 +425,6 @@ progress[value]::-webkit-progress-value {
   header > nav {
     position: absolute;
     width: 100%;
-    height: calc(auto - 50px);
     top: 50px;
     left: -100%;
     transition: 0.5s;
@@ -421,7 +440,7 @@ progress[value]::-webkit-progress-value {
   .nav_links li {
     display: block;
     margin: 5% 0%;
-    padding: 0px;
+    padding: 2%;
   }
   .cta {
     display: none;
