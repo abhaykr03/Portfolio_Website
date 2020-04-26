@@ -396,6 +396,7 @@ progress[value]::-webkit-progress-value {
 @media (min-width: 360px) and (max-width: 650px) {
   /* Toggled Navbar */
   header {
+    margin-top: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,7 +415,7 @@ progress[value]::-webkit-progress-value {
   }
   .menu-toggle {
     position: absolute;
-    top: 8%;
+    top: 30%;
     right: 0%;
   }
   .nav_links li {
