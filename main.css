@@ -398,7 +398,7 @@ progress[value]::-webkit-progress-value {
 
   #header-aside {
     /* margin-top: 0px; */
-    transition: all 0.5s ease-in-out;
+    transition: all 400ms ease-out;
   }
 
   .header-aside--active {
@@ -412,7 +412,6 @@ progress[value]::-webkit-progress-value {
 
   .menu-active {
     display: block !important;
-    transition: all 0.5s ease-in-out;
   }
 
   header {
@@ -427,7 +426,7 @@ progress[value]::-webkit-progress-value {
     width: 100%;
     top: 50px;
     left: -100%;
-    transition: 0.5s;
+    transition: ease-out 300ms;
   }
   header nav.active {
     left: 0;
