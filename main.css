@@ -346,7 +346,7 @@ progress[value]::-webkit-progress-value {
   left: 85%;
 }
 
-/* //=====================Media Query============================// */
+/* //=====================Media Query for larger Desktops============================// */
 
 @media (min-width: 1400px) {
   /* General Setting */
@@ -729,5 +729,197 @@ progress[value]::-webkit-progress-value {
     margin-left: 23px;
     font-size: 18px;
     font-weight: bold;
+  }
+}
+
+/* //=============For Tablets================// */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    margin: 0.5%;
+    padding: 3%;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 50px;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 50px;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 25px;
+  }
+  button {
+    font-size: 18px;
+  }
+  a {
+    font-size: 18px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cta {
+    padding: 12px 30px;
+    margin-left: 10px;
+  }
+  .nav_links li {
+    padding: 0px 15px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-gap: 0px;
+  }
+  .row > .contents > h1 {
+    margin-top: 8%;
+  }
+  .row > .contents > h5 {
+    margin-top: 20px;
+  }
+  .cta-secondary {
+    padding: 12px 20px;
+    margin-top: 30px;
+  }
+  .row > .bnr-img > img {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  #work {
+    padding-bottom: 50px;
+  }
+  #row-work {
+    display: flex;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  #row-work > .work-card {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+  }
+  #row-work > .work-card > img {
+    width: 100%;
+    height: auto;
+  }
+  .work-card h4 {
+    margin-top: 20px;
+  }
+  .work-card p {
+    margin-top: 15px;
+  }
+  #row-work > .col-1 {
+    padding-right: 10px;
+  }
+  #row-work > .col-2 {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  #row-work > .col-3 {
+    padding-left: 10px;
+  }
+  .tech-tags {
+    font-size: 10px;
+    padding: 2px 8px;
+    margin: 15px 5px 0 0;
+  }
+  #skill {
+    height: auto;
+    margin-bottom: 60px;
+  }
+  .skill__container {
+    margin-top: 40px;
+    padding: 0px 30px;
+  }
+  .skill__info {
+    margin-top: 25px;
+  }
+  .skill__gravatar {
+    display: block;
+    height: 36px;
+    width: auto;
+  }
+  .skill__name {
+    margin-left: 60px;
+    width: 150px;
+  }
+  .skill__experties {
+    display: none;
+  }
+  .Edu-Exp {
+    margin-top: 100px;
+  }
+  .Edu_heading {
+    width: 50%;
+  }
+  .Edu_details {
+    margin-top: 30px;
+    margin-left: 60px;
+    max-width: 100%;
+  }
+  .School_heading {
+    margin-top: 40px;
+    margin-left: 60px;
+    max-width: 100%;
+  }
+  .Exp_heading {
+    width: 50%;
+    padding-left: 10px;
+  }
+  .Exp_details {
+    margin-top: 30px;
+    margin-left: 60px;
+    max-width: 100%;
+  }
+  #About {
+    margin-top: 50px;
+  }
+  .contnr_footr {
+    margin: 0.5% 0.5% 0 0.5%;
+    padding: 3% 3% 0 3%;
+  }
+  .footer {
+    padding-top: 50px;
+  }
+  .footer_heading {
+    margin-top: 0.3em;
+  }
+  .left_column > img {
+    width: auto;
+    height: 300px;
+  }
+  .vertical_copyright {
+    top: 45%;
+    left: -38%;
+  }
+  .social {
+    top: 22%;
+    left: 90%;
+  }
+  .footer_cta {
+    padding: 5px 15px;
+    margin-top: 1em;
+  }
+  .social_vertical {
+    left: -50%;
+  }
+  .fab {
+    padding: 15px 0;
+  }
+  .tri_bot_right {
+    display: none;
   }
 }
