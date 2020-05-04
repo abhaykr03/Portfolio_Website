@@ -455,7 +455,7 @@ progress[value]::-webkit-progress-value {
 /* //======================xxxxxxx============================// */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .container {
-    margin: 5% 5% 0 5%;
+    margin: 2% 5% 0 5%;
   }
   h1 {
     font-size: 48px;
@@ -473,9 +473,6 @@ progress[value]::-webkit-progress-value {
   }
   .nav_links li {
     padding: 0 15px;
-  }
-  .row {
-    margin-top: 55px;
   }
   #row-work > .work-card {
     width: 33%;
