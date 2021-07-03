@@ -184,7 +184,7 @@ header {
 .skill__info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 60px;
 }
 
@@ -200,7 +200,8 @@ header {
 }
 
 .skill__progress {
-  flex-grow: 1;
+  display: none;
+  /* flex-grow: 1; */
 }
 
 progress[value] {
@@ -224,6 +225,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .skill__experties {
+  display: none;
   margin-left: 80px;
   width: 200px;
 }
